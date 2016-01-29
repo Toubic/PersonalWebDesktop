@@ -5,16 +5,25 @@ function Chat(aWindow){
     this.aDiv = aWindow;
     this.address = "ws://vhost3.lnu.se:20080/socket/";
     this.aKey = "eDBE76deU7L0H9mEBgxUKVR0VCnq0XBd";
+    this.sendButton = aWindow.querySelectorAll("input")[0];
 
 }
 
 Chat.prototype.connect = function(){
 
-}
+    this.sendButton.addEventListener("click", function(){
+        var message = this.aDiv.querySelectorAll("textarea")[0].value;
+        this.send(message);
 
-Chat.prototype.send = function(){
+    }.bind(this));
 
-}
+};
+
+Chat.prototype.send = function(message){
+    alert(message);
+};
 Chat.prototype.receive = function(){
 
-}
+};
+
+module.exports = Chat;
