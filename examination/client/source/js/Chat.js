@@ -20,6 +20,14 @@ Chat.prototype.connect = function(){
 
     }.bind(this));
 
+    this.wSocket.addEventListener("message", function(event){
+        var theData = event.data;
+        theData = JSON.parse(theData);
+        if(theData.type !== "heartbeat"){
+            this.receive(theData);
+        }
+    }.bind(this));
+
 };
 
 Chat.prototype.send = function(message){
@@ -38,7 +46,18 @@ Chat.prototype.send = function(message){
     this.wSocket.send(theData);
     }
 };
-Chat.prototype.receive = function(){
+Chat.prototype.receive = function(theData){
+
+    var dFragment = document.createDocumentFragment();
+    var theText = document.createTextNode(theData.username + ": ");
+    var pUsername = document.createElement("p");
+    pUsername.appendChild(theText);
+    dFragment.appendChild(pUsername);
+    theText = document.createTextNode(theData.data);
+    var pMessage = document.createElement("p");
+    pMessage.appendChild((theText));
+    dFragment.appendChild(pMessage);
+    this.aDiv.nextElementSibling.appendChild(dFragment);
 
 };
 
