@@ -7,10 +7,11 @@ function Chat(aWindow){
     this.aKey = "eDBE76deU7L0H9mEBgxUKVR0VCnq0XBd";
     this.sendButton = this.aDiv.querySelectorAll("input")[0];
     this.wSocket = null;
-
 }
 
 Chat.prototype.connect = function(){
+
+    this.aDiv.previousElementSibling.classList.add("scroll");
 
     this.wSocket = new WebSocket(this.address);
 

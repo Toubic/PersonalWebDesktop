@@ -4,5 +4,7 @@
 
 .hidden {visibility: hidden;}
 
+.scroll {width: 250px; height: 100px; overflow-y: scroll;}
+
 
 
