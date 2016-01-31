@@ -2,10 +2,10 @@
 
 function Chat(aWindow){
 
-    this.aDiv = aWindow;
+    this.aDiv = aWindow.nextElementSibling;
     this.address = "ws://vhost3.lnu.se:20080/socket/";
     this.aKey = "eDBE76deU7L0H9mEBgxUKVR0VCnq0XBd";
-    this.sendButton = aWindow.querySelectorAll("input")[0];
+    this.sendButton = this.aDiv.querySelectorAll("input")[0];
     this.wSocket = null;
 
 }
@@ -57,7 +57,7 @@ Chat.prototype.receive = function(theData){
     var pMessage = document.createElement("p");
     pMessage.appendChild((theText));
     dFragment.appendChild(pMessage);
-    this.aDiv.nextElementSibling.appendChild(dFragment);
+    this.aDiv.previousElementSibling.appendChild(dFragment);
 
 };
 
