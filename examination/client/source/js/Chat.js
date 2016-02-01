@@ -1,12 +1,13 @@
 "use strict";
 
-function Chat(aWindow){
+function Chat(aWindow, aUsername){
 
     this.aDiv = aWindow.nextElementSibling;
     this.address = "ws://vhost3.lnu.se:20080/socket/";
     this.aKey = "eDBE76deU7L0H9mEBgxUKVR0VCnq0XBd";
     this.sendButton = this.aDiv.querySelectorAll("input")[0];
     this.wSocket = null;
+    this.aUsername = aUsername;
 }
 
 Chat.prototype.connect = function(){
@@ -37,7 +38,7 @@ Chat.prototype.send = function(message){
     var theData = {
         type: "message",
         data: message,
-        username: "Tobbe",
+        username: this.aUsername,
         channel: "",
         key: this.aKey
     };

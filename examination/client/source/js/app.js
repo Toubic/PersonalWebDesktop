@@ -1,10 +1,10 @@
 
 "use strict";
 
-var TheChat = require("./Chat.js");
+var TheChat = require("./NewChat.js");
 var chatDiv = document.querySelector("#chatTop");
 var aChat = new TheChat(chatDiv);
-aChat.connect();
+aChat.readyUp();
 
 
 var NewMemory = require("./NewMemory.js");
