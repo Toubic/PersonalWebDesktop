@@ -8,6 +8,7 @@ function Chat(aWindow, aUsername){
     this.sendButton = this.aDiv.querySelectorAll("input")[0];
     this.wSocket = null;
     this.aUsername = aUsername;
+
 }
 
 Chat.prototype.connect = function(){
@@ -45,7 +46,7 @@ Chat.prototype.send = function(message){
 
     theData = JSON.stringify(theData);
     if(this.wSocket.readyState === 1) {
-    this.wSocket.send(theData);
+        this.wSocket.send(theData);
     }
 };
 Chat.prototype.receive = function(theData){

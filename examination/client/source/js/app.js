@@ -13,4 +13,10 @@ var theDiv = document.querySelector("#theSetup");
 var aMemory = new NewMemory(theDiv);
 aMemory.readyUp();
 
+var NewTwitch = require("./NewTwitch.js");
+
+var twitchDiv = document.querySelector("#twitchTop");
+var aTwitch = new NewTwitch(twitchDiv);
+aTwitch.readyUp();
+
 
