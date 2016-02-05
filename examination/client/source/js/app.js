@@ -2,7 +2,9 @@
 "use strict";
 
 var menuBarBottom = document.querySelector("#bottomMenuBar");
+
 var TheChat = require("./NewChat.js");
+
 menuBarBottom.querySelectorAll("img")[1].addEventListener("click", function(){
 
     var aTemplate = document.querySelector("#chatTemplate");
@@ -15,13 +17,19 @@ menuBarBottom.querySelectorAll("img")[1].addEventListener("click", function(){
 
 });
 
-/*
 var NewMemory = require("./NewMemory.js");
 
-var theDiv = document.querySelector("#theSetup");
-var aMemory = new NewMemory(theDiv);
-aMemory.readyUp();
-*/
+menuBarBottom.querySelectorAll("img")[2].addEventListener("click", function(){
+
+    var aTemplate = document.querySelector("#memoryTemplate");
+    var memoryWindow = document.importNode(aTemplate.content.firstElementChild, true);
+    var theContent = document.querySelector("#content");
+    theContent.appendChild(memoryWindow);
+    var theDiv = memoryWindow.firstElementChild;
+    var aMemory = new NewMemory(theDiv);
+    aMemory.readyUp();
+
+});
 
 var NewTwitch = require("./NewTwitch.js");
 
