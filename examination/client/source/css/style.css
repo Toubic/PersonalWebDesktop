@@ -12,5 +12,5 @@
 
 #bottomMenuBar {width: 1278px; height: 68px; border: 1px solid black; background-image: url("../image/mbar.jpg"); border-radius: 5px;}
 
-
+#bottomMenuBar img {padding-left: 10px;}
 
