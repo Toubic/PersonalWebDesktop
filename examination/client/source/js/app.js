@@ -5,8 +5,12 @@ var menuBarBottom = document.querySelector("#bottomMenuBar");
 
 var wTemplate = document.querySelector("#windowTemplate");
 var aWindow = document.importNode(wTemplate.content.firstElementChild, true);
+var closeSymbol = aWindow.firstElementChild.querySelectorAll("img")[0];
 var aContent = document.querySelector("#content");
 aContent.appendChild(aWindow);
+closeSymbol.addEventListener("click", function(){
+    aContent.removeChild(aWindow);
+});
 
 
 var TheChat = require("./NewChat.js");
