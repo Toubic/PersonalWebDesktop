@@ -11,6 +11,15 @@ aContent.appendChild(aWindow);
 closeSymbol.addEventListener("click", function(){
     aContent.removeChild(aWindow);
 });
+aWindow.firstElementChild.addEventListener("mousedown",function(){
+
+    aContent.addEventListener("mousemove", function moving(event) {
+        aWindow.style.transform = "translate3d(" + (event.clientX - 150) + "px," + (event.clientY - 15) + "px, 0)";
+        aContent.addEventListener("mouseup",function(){
+            aContent.removeEventListener("mousemove", moving);
+        });
+    });
+});
 
 
 var TheChat = require("./NewChat.js");
