@@ -3,6 +3,12 @@
 
 var menuBarBottom = document.querySelector("#bottomMenuBar");
 
+var wTemplate = document.querySelector("#windowTemplate");
+var aWindow = document.importNode(wTemplate.content.firstElementChild, true);
+var aContent = document.querySelector("#content");
+aContent.appendChild(aWindow);
+
+
 var TheChat = require("./NewChat.js");
 
 menuBarBottom.querySelectorAll("img")[1].addEventListener("click", function(){
