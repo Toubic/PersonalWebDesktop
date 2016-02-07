@@ -20,7 +20,9 @@ menuBarBottom.querySelectorAll("img")[1].addEventListener("click", function(){
     aWindow.firstElementChild.addEventListener("mousedown",function(){
 
         aWindow.classList.add("isActive");
-        aContent.appendChild(aWindow);
+        if(aWindow.nextElementSibling !== null) {
+            aContent.appendChild(aWindow);
+        }
         aContent.addEventListener("mousemove", function moving(event) {
             aWindow.style.transform = "translate3d(" + (event.clientX - 150) + "px," + (event.clientY - 15) + "px, 0)";
             aContent.addEventListener("mouseup",function(){
@@ -57,7 +59,9 @@ menuBarBottom.querySelectorAll("img")[2].addEventListener("click", function(){
     aWindow.firstElementChild.addEventListener("mousedown",function(){
 
         aWindow.classList.add("isActive");
-        aContent.appendChild(aWindow);
+        if(aWindow.nextElementSibling !== null) {
+            aContent.appendChild(aWindow);
+        }
         aContent.addEventListener("mousemove", function moving(event) {
             aWindow.style.transform = "translate3d(" + (event.clientX - 150) + "px," + (event.clientY - 15) + "px, 0)";
             aContent.addEventListener("mouseup",function(){
@@ -94,7 +98,9 @@ menuBarBottom.querySelectorAll("img")[0].addEventListener("click", function(){
     aWindow.firstElementChild.addEventListener("mousedown",function(){
 
         aWindow.classList.add("isActive");
-        aContent.appendChild(aWindow);
+        if(aWindow.nextElementSibling !== null) {
+            aContent.appendChild(aWindow);
+        }
         aContent.addEventListener("mousemove", function moving(event) {
             aWindow.style.transform = "translate3d(" + (event.clientX - 150) + "px," + (event.clientY - 15) + "px, 0)";
             aContent.addEventListener("mouseup",function(){
