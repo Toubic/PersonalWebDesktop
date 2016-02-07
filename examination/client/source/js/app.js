@@ -41,7 +41,6 @@ menuBarBottom.querySelectorAll("img")[1].addEventListener("click", function(){
     //Grabs chat template and creates a new chat:
     var aTemplate = document.querySelector("#chatTemplate");
     var chatWindow = document.importNode(aTemplate.content.firstElementChild, true);
-    var theContent = document.querySelector("#content");
     aWindow.firstElementChild.nextElementSibling.appendChild(chatWindow);
     var chatDiv = chatWindow.firstElementChild.nextElementSibling;
     var aChat = new TheChat(chatDiv);
@@ -87,7 +86,6 @@ menuBarBottom.querySelectorAll("img")[2].addEventListener("click", function(){
     //Grabs memory template and creates a new memory:
     var aTemplate = document.querySelector("#memoryTemplate");
     var memoryWindow = document.importNode(aTemplate.content.firstElementChild, true);
-    var theContent = document.querySelector("#content");
     aWindow.firstElementChild.nextElementSibling.appendChild(memoryWindow);
     var theDiv = memoryWindow.firstElementChild;
     var aMemory = new NewMemory(theDiv);
@@ -133,7 +131,6 @@ menuBarBottom.querySelectorAll("img")[0].addEventListener("click", function(){
     //Grabs twitch template and creates a new twitch application:
     var aTemplate = document.querySelector("#twitchTemplate");
     var twitchWindow = document.importNode(aTemplate.content.firstElementChild, true);
-    var theContent = document.querySelector("#content");
     aWindow.firstElementChild.nextElementSibling.appendChild(twitchWindow);
     var twitchDiv = twitchWindow.firstElementChild;
     var aTwitch = new NewTwitch(twitchDiv);
