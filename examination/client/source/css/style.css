@@ -8,7 +8,7 @@
 
 .scroll {width: 290px; height: 100px; overflow-y: scroll;}
 
-.outerWindow{width: 300px; height: 300px; border-radius: 5px; background-color: white; box-shadow: 2px 2px 2px black; transform: translate3d(10px, 10px, 0);}
+.outerWindow{position: fixed; width: 300px; height: 300px; border-radius: 5px; background-color: white; box-shadow: 2px 2px 2px black; transform: translate3d(10px, 10px, 0);}
 
 .outerWindow:active {border: 5px solid yellow;}
 
