@@ -32,7 +32,7 @@ menuBarBottom.querySelectorAll("img")[1].addEventListener("click", function(){
     var aTemplate = document.querySelector("#chatTemplate");
     var chatWindow = document.importNode(aTemplate.content.firstElementChild, true);
     var theContent = document.querySelector("#content");
-    aWindow.appendChild(chatWindow);
+    aWindow.firstElementChild.nextElementSibling.appendChild(chatWindow);
     var chatDiv = chatWindow.firstElementChild.nextElementSibling;
     var aChat = new TheChat(chatDiv);
     aChat.readyUp();
@@ -67,7 +67,7 @@ menuBarBottom.querySelectorAll("img")[2].addEventListener("click", function(){
     var aTemplate = document.querySelector("#memoryTemplate");
     var memoryWindow = document.importNode(aTemplate.content.firstElementChild, true);
     var theContent = document.querySelector("#content");
-    aWindow.appendChild(memoryWindow);
+    aWindow.firstElementChild.nextElementSibling.appendChild(memoryWindow);
     var theDiv = memoryWindow.firstElementChild;
     var aMemory = new NewMemory(theDiv);
     aMemory.readyUp();
@@ -102,7 +102,7 @@ menuBarBottom.querySelectorAll("img")[0].addEventListener("click", function(){
     var aTemplate = document.querySelector("#twitchTemplate");
     var twitchWindow = document.importNode(aTemplate.content.firstElementChild, true);
     var theContent = document.querySelector("#content");
-    aWindow.appendChild(twitchWindow);
+    aWindow.firstElementChild.nextElementSibling.appendChild(twitchWindow);
     var twitchDiv = twitchWindow.firstElementChild;
     var aTwitch = new NewTwitch(twitchDiv);
     aTwitch.readyUp();

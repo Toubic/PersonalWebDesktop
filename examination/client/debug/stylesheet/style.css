@@ -8,15 +8,19 @@
 
 .scroll {width: 290px; height: 100px; overflow-y: scroll;}
 
-.outerWindow{position: fixed; width: 300px; height: 300px; border-radius: 5px; background-color: white; box-shadow: 2px 2px 2px black; transform: translate3d(10px, 10px, 0);}
+.outerWindow{position: fixed; width: 350px; height: 300px; border-radius: 5px; background-color: white; box-shadow: 2px 2px 2px black; transform: translate3d(10px, 10px, 0);}
 
 .isActive {border: 5px solid yellow;}
 
-.topMenu{width: 300px; height: 30px; border-radius: 5px; background-image: url("../image/topbar.jpg");}
+.topMenu{width: 350px; height: 30px; border-radius: 5px; background-image: url("../image/topbar.jpg");}
 
 .topMenu img {width: 26px; height: 26px; padding: 2px; border-radius: 5px;}
 
 .closeIcon {float: right;}
+
+.windowContent {width: 330px; height: 250px; padding: 10px; text-align: center; overflow: auto; font-weight: bold;}
+
+.windowContent input {margin: 5px; padding: 5px; font-weight: bold;}
 
 #desktop {width: 1280px; height: 720px; background-image: url("../image/bw.jpg");}
 

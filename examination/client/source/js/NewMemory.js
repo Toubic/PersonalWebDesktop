@@ -10,6 +10,7 @@ function NewMemory(aWindow){
 }
 
 function setup(aSetup){
+
     aSetup.theSubmitButton.addEventListener("click", function(){
         aSetup.theRadioButton = aSetup.setupDiv.querySelectorAll("input")[0];
         if (aSetup.theRadioButton.checked) {
