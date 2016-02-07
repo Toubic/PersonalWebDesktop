@@ -27,13 +27,16 @@ function setup(aSetup){
         aSetup.theRadioButton = aSetup.setupDiv.querySelectorAll("input")[3];
         if (aSetup.theRadioButton.checked) {
             aSetup.aMemory = new Memory(4, 4, aSetup.setupDiv.nextElementSibling);
+            aSetup.setupDiv.classList.add("noneDiv");
             aSetup.aMemory.getMemoryArray();
             aSetup.aMemory.shuffelBricks();
             aSetup.aMemory.getBricks();
         }
+
         aSetup.theRadioButton = aSetup.setupDiv.querySelectorAll("input")[4];
         if (aSetup.theRadioButton.checked) {
             aSetup.aMemory = new Memory(2, 2, aSetup.setupDiv.nextElementSibling);
+            aSetup.setupDiv.classList.add("noneDiv");
             aSetup.aMemory.getMemoryArray();
             aSetup.aMemory.shuffelBricks();
             aSetup.aMemory.getBricks();
@@ -41,6 +44,7 @@ function setup(aSetup){
         aSetup.theRadioButton = aSetup.setupDiv.querySelectorAll("input")[5];
         if (aSetup.theRadioButton.checked) {
             aSetup.aMemory = new Memory(2, 4, aSetup.setupDiv.nextElementSibling);
+            aSetup.setupDiv.classList.add("noneDiv");
             aSetup.aMemory.getMemoryArray();
             aSetup.aMemory.shuffelBricks();
             aSetup.aMemory.getBricks();

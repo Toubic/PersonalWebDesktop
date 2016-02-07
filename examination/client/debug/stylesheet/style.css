@@ -22,6 +22,8 @@
 
 .windowContent input {margin: 5px; padding: 5px; font-weight: bold;}
 
+.noneDiv {display: none;}
+
 #desktop {width: 1280px; height: 720px; background-image: url("../image/bw.jpg");}
 
 #content {width: 1280px; height: 650px;}
