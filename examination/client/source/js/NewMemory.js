@@ -14,15 +14,15 @@ function setup(aSetup){
     aSetup.theSubmitButton.addEventListener("click", function(){
         aSetup.theRadioButton = aSetup.setupDiv.querySelectorAll("input")[0];
         if (aSetup.theRadioButton.checked) {
-            aSetup.setupDiv.parentElement.style.background = "red";
+            aSetup.setupDiv.parentElement.parentElement.style.background = "red";
         }
         aSetup.theRadioButton = aSetup.setupDiv.querySelectorAll("input")[1];
         if (aSetup.theRadioButton.checked) {
-            aSetup.setupDiv.parentElement.style.background = "yellow";
+            aSetup.setupDiv.parentElement.parentElement.style.background = "yellow";
         }
         aSetup.theRadioButton = aSetup.setupDiv.querySelectorAll("input")[2];
         if (aSetup.theRadioButton.checked) {
-            aSetup.setupDiv.parentElement.style.background = "orange";
+            aSetup.setupDiv.parentElement.parentElement.style.background = "orange";
         }
         aSetup.theRadioButton = aSetup.setupDiv.querySelectorAll("input")[3];
         if (aSetup.theRadioButton.checked) {
