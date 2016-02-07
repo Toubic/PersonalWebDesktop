@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+
+
 .imageSize {width: 50px; height: 50px;}
 
 .hidden {visibility: hidden;}
@@ -7,6 +9,8 @@
 .scroll {width: 290px; height: 100px; overflow-y: scroll;}
 
 .outerWindow{width: 300px; height: 300px; border-radius: 5px; background-color: white; box-shadow: 2px 2px 2px black; transform: translate3d(10px, 10px, 0);}
+
+.outerWindow:active {border: 5px solid yellow;}
 
 .topMenu{width: 300px; height: 30px; border: border-radius: 5px; background-image: url("../image/topbar.jpg");}
 
