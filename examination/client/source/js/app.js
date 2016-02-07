@@ -9,7 +9,8 @@ menuBarBottom.querySelectorAll("img")[1].addEventListener("click", function(){
 
     var wTemplate = document.querySelector("#windowTemplate");
     var aWindow = document.importNode(wTemplate.content.firstElementChild, true);
-    var closeSymbol = aWindow.firstElementChild.querySelectorAll("img")[0];
+    aWindow.firstElementChild.querySelectorAll("img")[0].setAttribute("src", "image/chat.png");
+    var closeSymbol = aWindow.firstElementChild.querySelectorAll("img")[1];
     var aContent = document.querySelector("#content");
     aContent.appendChild(aWindow);
     closeSymbol.addEventListener("click", function(){
@@ -44,7 +45,8 @@ menuBarBottom.querySelectorAll("img")[2].addEventListener("click", function(){
 
     var wTemplate = document.querySelector("#windowTemplate");
     var aWindow = document.importNode(wTemplate.content.firstElementChild, true);
-    var closeSymbol = aWindow.firstElementChild.querySelectorAll("img")[0];
+    aWindow.firstElementChild.querySelectorAll("img")[0].setAttribute("src", "image/memory.png");
+    var closeSymbol = aWindow.firstElementChild.querySelectorAll("img")[1];
     var aContent = document.querySelector("#content");
     aContent.appendChild(aWindow);
     closeSymbol.addEventListener("click", function(){
@@ -78,7 +80,8 @@ menuBarBottom.querySelectorAll("img")[0].addEventListener("click", function(){
 
     var wTemplate = document.querySelector("#windowTemplate");
     var aWindow = document.importNode(wTemplate.content.firstElementChild, true);
-    var closeSymbol = aWindow.firstElementChild.querySelectorAll("img")[0];
+    aWindow.firstElementChild.querySelectorAll("img")[0].setAttribute("src", "image/twitch.png");
+    var closeSymbol = aWindow.firstElementChild.querySelectorAll("img")[1];
     var aContent = document.querySelector("#content");
     aContent.appendChild(aWindow);
     closeSymbol.addEventListener("click", function(){
